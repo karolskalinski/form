@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formularz kontaktowy</title>
+    <link href="normalizer.css" rel="stylesheet" type="text/css">
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <main>
+        <form class="form" action="http://dev.cotenfrontend.pl/" method="POST">
+            <p>
+                <label for="nameId">Podaj swoje imię<br>
+                    <input name="name" placeholder="Wpisz tutaj swoje imię" id="nameId">
+                </label>
+            </p>
+            <p>
+                <label for="surnameId">Podaj swoje nazwisko<br>
+                    <input name="surname" placeholder="Wpisz tutaj swoje nazwisko" id="surnameId">
+                </label>
+            </p>
+            <fieldset>
+                <legend>
+                    Pola wyboru
+                </legend>
+                <p>
+                    <input type="radio" name="radio" id="radioId1">
+                    <label for="radioId1">Opcja 1 </label>
+                </p>
+                <p>
+                    <input type="radio" name="radio" id="radioId2">
+                    <label for="radioId2">Opcja 2</label>
+                </p>
+                <p>
+                    <input type="radio" name="radio" id="radioId3">
+                    <label for="radioId3">Opcja 3</label>
+                </p>
+            </fieldset>
+            <p>
+                <input type="checkbox" name="checkbox" id="myCheckbox">
+                <label for="myCheckbox">pierwsza odpowiedz</label>
+            </p>
+            <p>
+                <input type="checkbox" name="checkbox" id="myCheckbox1">
+                <label for="myCheckbox1">druga odpowiedz</label>
+            </p>
+            <p>
+                <input type="checkbox" name="checkbox" id="myCheckbox2">
+                <label for="myCheckbox2">trzecia odpowiedz</label>
+            </p>
+            <p>
+                <input type="number" name="age" value="30" id="myAge">
+                <label for="myAge">Podaj swój wiek</label>
+            </p>
+            <p>
+                <input type="email" name="email" id="emailId">
+                <label for="emailId">podaj swoj email</label>
+            </p>
+            <p>
+                <input type="tel" required name="tel" id="telId"
+                    pattern="^\s*\(?(020[7,8]{1}\)?[ ]?[1-9]{1}[0-9{2}[ ]?[0-9]{4})|(0[1-8]{1}[0-9]{3}\)?[ ]?[1-9]{1}[0-9]{2}[ ]?[0-9]{3})\s*$">
+                <label for="telId">Nr Telefonu </label>
+            </p>
+            <p>
+                <label for="rangeId">Jak jesteś usatysfakcjonowany z wypełnienia ankiety </label><br>
+                <input type="range" min="0" max="10" step="1" value="0" name="range" id="rangeId">
+            </p>
+            <p>
+                <label for="passwordId">Podaj swoje haslo (Password (UpperCase, LowerCase, Number/SpecialChar and min 8
+                    Chars))</label><br>
+                <input type="password" required name="password" id="passwordId"
+                    pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$">
+            </p>
+
+            <p>
+                <label for="select">Proszę wybrać</label>
+                <select name="select" id="select">
+                    <option value="nie wybrano opcji"></option>
+                    <option>Tak</option>
+                    <option>Nie</option>
+                </select>
+            </p>
+            <p>
+                <label for="area">Proszę opisać swoją historię</label><br>
+                <textarea name="area" id="area"></textarea>
+            </p>
+            <input type="submit" value="wyślij formę">
+
+        </form>
+    </main>
+
+</body>
+
+</html>
